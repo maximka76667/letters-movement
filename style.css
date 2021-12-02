@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@keyframes effect1 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes effect2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes effect3 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes effect4 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -5px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes effect5 {
+    0% {
+        color: #000;
+    }
+
+    50% {
+        color: #ccc;
+    }
+
+    100% {
+        color: #000;
+    }
+}
+
+body {
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.container {
+    display: flex;
+}
+
+.text {
+    width: 50%;
+    line-height: 2;
+}
+
+span {
+    display: inline-block;
+    letter-spacing: 0.3em;
+}
+
+.effect1 {
+    animation: effect1 2s infinite alternate;
+}
+
+.effect2 {
+    animation: effect2 2s infinite alternate;
+}
+
+.effect3 {
+    animation: effect3 2s infinite alternate;
+}
+
+.effect4 {
+    animation: effect4 2s infinite alternate;
+}
+
+.effect5 {
+    animation: effect5 2s infinite alternate;
+}
