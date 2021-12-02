@@ -10,7 +10,8 @@ function start() {
 
         let random = Math.floor(1 + Math.random() * 5);
 
-        newText += '<span class="effect' + random + '">' + text[i] + '</span>';
+        if (text[i] == " ") newText += " ";
+        else newText += '<span class="effect' + random + '">' + text[i] + '</span>';
     }
 
     $('.text').html(newText);

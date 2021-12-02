@@ -73,6 +73,7 @@
 body {
     min-height: 95vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Press Start 2P', cursive;
@@ -93,7 +94,7 @@ span {
 }
 
 .effect1 {
-    animation: effect1 2s infinite alternate;
+    animation: effect1 1.5s infinite alternate;
 }
 
 .effect2 {
@@ -101,13 +102,19 @@ span {
 }
 
 .effect3 {
-    animation: effect3 2s infinite alternate;
+    animation: effect3 2.5s infinite alternate;
 }
 
 .effect4 {
-    animation: effect4 2s infinite alternate;
+    animation: effect4 3s infinite alternate;
 }
 
 .effect5 {
     animation: effect5 2s infinite alternate;
+}
+
+@media (max-width: 800px) {
+    .text {
+        width: 80%;
+    }
 }
