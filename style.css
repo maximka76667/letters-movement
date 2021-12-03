@@ -73,14 +73,17 @@
 @keyframes wave {
     0% {
         transform: translate(0, 0);
+        color: rgb(88, 238, 230);
     }
 
     50% {
         transform: translate(0, -20px);
+        color: rgb(29, 192, 192);
     }
 
     100% {
         transform: translate(0, 0);
+        color: rgb(44, 172, 189);
     }
 }
 
