@@ -70,6 +70,20 @@
     }
 }
 
+@keyframes wave {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
 body {
     min-height: 95vh;
     display: flex;
@@ -79,13 +93,21 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 
+h2 {
+    margin: 40px 0 20px;
+}
+
 .container {
     display: flex;
 }
 
-.text {
+.text1 {
     width: 50%;
     line-height: 2;
+}
+
+.text2 {
+    width: 50%;
 }
 
 span {
@@ -117,4 +139,8 @@ span {
     .text {
         width: 80%;
     }
+}
+
+.text2 span {
+    animation: wave 1.5s var(--i) infinite alternate;
 }
