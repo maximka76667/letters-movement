@@ -16,7 +16,7 @@ function stylizeText1() {
     for (let i = 0; i < text.length; i++) {
         let random = Math.floor(1 + Math.random() * 5);
         if (text[i] == " ") newText += " ";
-        else newText += '<span style="color: ' + generateRandomColor() + '" class="effect' + random + '">' + text[i] + '</span>';
+        else newText += `<span style="color: ${generateRandomColor()}" class="effect${random}">${text[i]}</span>`;
     }
 
     $('.text1').html(newText);
@@ -28,7 +28,7 @@ function stylizeText2() {
 
     for (let i = 0; i < text.length; i++) {
         if (text[i] == " ") newText += " ";
-        else newText += '<span style="--i: ' + (i * 100 + 'ms') + '">' + text[i] + '</span>';
+        else newText += `<span style="--i: ${(i * 100 + 'ms')}">${text[i]}</span>`;
     }
 
     $('.text2').html(newText);
