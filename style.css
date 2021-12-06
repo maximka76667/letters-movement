@@ -1,141 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 @keyframes effect1 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.5);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+  50% {
+    transform: scale(1.5);
+  }
 }
 
 @keyframes effect2 {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(10deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
+  50% {
+    transform: rotate(10deg);
+  }
 }
 
 @keyframes effect3 {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(-10deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
+  50% {
+    transform: rotate(-10deg);
+  }
 }
 
 @keyframes effect4 {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    50% {
-        transform: translate(0, -5px);
-    }
-
-    100% {
-        transform: translate(0, 0);
-    }
+  50% {
+    transform: translate(0, -5px);
+  }
 }
 
 @keyframes effect5 {
-    50% {
-        color: #ccc;
-    }
+  50% {
+    color: #ccc;
+  }
 }
 
 @keyframes wave {
-    0% {
-        transform: translate(0, 0);
-        color: rgb(88, 238, 230);
-    }
+  0% {
+    transform: translate(0, 0);
+    color: rgb(88, 238, 230);
+  }
 
-    50% {
-        transform: translate(0, -20px);
-        color: rgb(29, 192, 192);
-    }
+  50% {
+    transform: translate(0, -20px);
+    color: rgb(29, 192, 192);
+  }
 
-    100% {
-        transform: translate(0, 0);
-        color: rgb(44, 172, 189);
-    }
+  100% {
+    transform: translate(0, 0);
+    color: rgb(44, 172, 189);
+  }
 }
 
 body {
-    min-height: 95vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Press Start 2P', cursive;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Press Start 2P", cursive;
 }
 
 h2 {
-    margin: 40px 0 20px;
+  margin: 40px 0 20px;
 }
 
 .container {
-    display: flex;
+  display: flex;
 }
 
-.text1 {
-    width: 50%;
-    line-height: 2;
-}
-
-.text2 {
-    width: 50%;
-}
-
-span {
-    display: inline-block;
-    letter-spacing: 0.3em;
-}
-
-.effect1 {
-    animation: effect1 1.5s infinite alternate;
-}
-
-.effect2 {
-    animation: effect2 2s infinite alternate;
-}
-
-.effect3 {
-    animation: effect3 2.5s infinite alternate;
-}
-
-.effect4 {
-    animation: effect4 3s infinite alternate;
-}
-
-.effect5 {
-    animation: effect5 2s infinite alternate;
+.text {
+  width: 50%;
 }
 
 @media (max-width: 800px) {
-    .text {
-        width: 80%;
-    }
+  .text {
+    width: 80%;
+  }
+}
+
+.text1 {
+  line-height: 2;
+}
+
+span {
+  display: inline-block;
+  letter-spacing: 0.3em;
+}
+
+.effect1 {
+  animation: effect1 1.5s infinite alternate;
+}
+
+.effect2 {
+  animation: effect2 2s infinite alternate;
+}
+
+.effect3 {
+  animation: effect3 2.5s infinite alternate;
+}
+
+.effect4 {
+  animation: effect4 3s infinite alternate;
+}
+
+.effect5 {
+  animation: effect5 2s infinite alternate;
 }
 
 .text2 span {
-    animation: wave 1.5s var(--i) infinite alternate;
+  animation: wave 1.5s var(--i) infinite alternate;
 }
