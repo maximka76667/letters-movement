@@ -47,6 +47,13 @@
   }
 }
 
+@keyframes flip {
+  100% {
+    transform: rotate(360deg);
+    color: #f0a;
+  }
+}
+
 body {
   min-height: 95vh;
   display: flex;
@@ -74,7 +81,8 @@ h2 {
   }
 }
 
-.text1 {
+.text1,
+.text3 {
   line-height: 2;
 }
 
@@ -103,6 +111,10 @@ span {
   animation: effect5 2s infinite alternate;
 }
 
-.text2 span {
+.effect6 {
   animation: wave 1.5s var(--i) infinite alternate;
+}
+
+.effect7 {
+  animation: flip 1.5s var(--i) infinite;
 }
