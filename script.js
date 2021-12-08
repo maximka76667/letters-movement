@@ -40,7 +40,8 @@ function stylizeText3() {
 
   for (let i = 0; i < text.length; i++) {
     if (text[i] == " ") newText += " ";
-    else newText += `<span style="--i: ${(i * 100 + 'ms')}" class="effect7">${text[i]}</span>`;
+    if (i % 5 == 0) newText += `<span style="--i: ${(i * 100 + 'ms')}" class="effect7">${text[i]}</span>`
+    else newText += text[i];
   }
 
   $('.text3').html(newText);
