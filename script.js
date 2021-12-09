@@ -9,47 +9,49 @@ function generateRandomColor() {
   return '#' + r.toString(16) + g.toString(16) + b.toString(16);
 }
 
-function stylizeText1() {
-  const text = $('.text1').html();
-  let newText = "";
+function stylizeText(textSelector, stylizeFunction) {
+  const text = $(textSelector).html();
 
-  for (let i = 0; i < text.length; i++) {
-    let random = Math.floor(1 + Math.random() * 5);
-    if (text[i] == " ") newText += " ";
-    else newText += `<span style="color: ${generateRandomColor()}" class="effect${random}">${text[i]}</span>`;
-  }
+  let newText = stylizeFunction(text);
 
-  $('.text1').html(newText);
-}
-
-function stylizeText2() {
-  const text = $('.text2').html();
-  let newText = "";
-
-  for (let i = 0; i < text.length; i++) {
-    if (text[i] == " ") newText += " ";
-    else newText += `<span style="--i: ${(i * 100 + 'ms')}" class="effect6">${text[i]}</span>`;
-  }
-
-  $('.text2').html(newText);
-}
-
-function stylizeText3() {
-  const text = $('.text3').html();
-  let newText = "";
-
-  for (let i = 0; i < text.length; i++) {
-    if (text[i] == " ") newText += " ";
-    if (i % 5 == 0) newText += `<span style="--i: ${(i * 100 + 'ms')}" class="effect7">${text[i]}</span>`
-    else newText += text[i];
-  }
-
-  $('.text3').html(newText);
+  $(textSelector).html(newText);
 }
 
 function start() {
-  stylizeText1();
-  stylizeText2();
-  stylizeText3();
+  stylizeText('.text1', (text) => {
+    let newText = "";
+
+    for (let i = 0; i < text.length; i++) {
+      let random = Math.floor(1 + Math.random() * 5);
+      if (text[i] == " ") newText += " ";
+      else newText += `<span style="color: ${generateRandomColor()}" class="effect${random}">${text[i]}</span>`;
+    }
+
+    return newText;
+  });
+
+  stylizeText('.text2', (text) => {
+    let newText = "";
+
+    for (let i = 0; i < text.length; i++) {
+      if (text[i] == " ") newText += " ";
+      else newText += `<span style="--i: ${(i * 100 + 'ms')}" class="effect6">${text[i]}</span>`;
+    }
+
+    return newText;
+  });
+
+  stylizeText('.text3', (text) => {
+    let newText = "";
+
+    for (let i = 0; i < text.length; i++) {
+      if (text[i] == " ") newText += " ";
+      if (i % 5 == 0) newText += `<span style="--i: ${(i * 100 + 'ms')}" class="effect7">${text[i]}</span>`
+      else newText += text[i];
+    }
+
+    return newText;
+  })
+
 }
 
